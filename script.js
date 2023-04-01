@@ -79,8 +79,13 @@ const calculate = () => {
 const equalSign = document.querySelector(".equal-sign")
 
 equalSign.addEventListener("click", () => {
-    calculate()
-    updateScreen(currentNumber)
+    if (currentNumber === '0') {
+        updateScreen(currentNumber)
+    } else {
+        calculate()
+        updateScreen(currentNumber)    
+    }
+    
 })
 
 const clearAll = () => {
